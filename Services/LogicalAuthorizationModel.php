@@ -261,6 +261,7 @@ class LogicalAuthorizationModel implements LogicalAuthorizationModelInterface
         } elseif (is_object($model)) {
             $psrClass = get_class($model);
         }
+        $psrClass = str_replace('Proxies\__CG__\\', '', $psrClass);
 
         if (!empty($tree['models']) && array_key_exists($psrClass, $tree['models'])) {
             return $tree['models'][$psrClass];
