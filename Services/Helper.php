@@ -64,9 +64,9 @@ class Helper implements HelperInterface
             $this->logger->error($message, $context);
         } else {
             $message .= "\nContext:\n";
-            foreach ($context as $key => $value) {
-                $message .= "$key => ".print_r($value, true)."\n";
-            }
+//            foreach ($context as $key => $value) {
+//                $message .= "$key => ".print_r($value, true)."\n";
+//            }
             throw new LogicalAuthorizationException($message);
         }
     }
